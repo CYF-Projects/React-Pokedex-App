@@ -1,6 +1,17 @@
+import React, { useState } from "react";
+
 const CaughtPokemon = (props) => {
+	const [numberPokemon, setNumberPokemon] = useState(0);
+	function addPokemon() {
+		setNumberPokemon(numberPokemon + 1);
+	}
 	return (
-		<p>Caught 0 Pokemon on {props.date}</p>
+		<div>
+			<p>
+        Caught {numberPokemon} Pokemon on {props.date}
+			</p>
+			<button onClick={addPokemon}>Catch Pokemon</button>
+		</div>
 	);
 };
 

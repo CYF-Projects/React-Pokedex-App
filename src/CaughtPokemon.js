@@ -10,7 +10,7 @@ const CaughtPokemon = (props) => {
 	};
 
 	function addPokemon() {
-		setCaught(caught.concat(pokemonNameInput));
+		pokemonNameInput === "" ? alert("Please enter a Pokemon name!") : setCaught(caught.concat(pokemonNameInput));
 		setPokemonNameInput("");
 	}
 	return (
